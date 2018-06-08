@@ -1,0 +1,39 @@
+body{
+  color: indigo;
+}
+nav{
+  background-color: indigo;
+}
+nav > a{
+  color: white;
+}
+.list{
+  list-style-type: none;
+}
+
+footer{
+  background-color: indigo;
+} 
+
+form{
+  background-color: indigo;
+  color: white;
+  border-radius: 6px;
+  min-height: 50vh;
+}
+.form_label{
+  font-size: 1.4rem;
+}
+input[type=submit]{
+  color:indigo;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+i{
+  font-size: 3rem;
+}
+p.about{
+  font-size: 1.4rem;
+}

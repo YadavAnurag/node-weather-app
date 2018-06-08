@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    .col-lg-4.offset-lg-4.col-md-4.offset-md-4.col-sm-10.offset-sm-1.col-xs-12.pb-5.container-fluid
+        form(action="#", method="post").mt-5.text-center.pt-5.p-1
+            .form-group.p-1
+                label(for="")
+                  p.form_label Enter City Name Here
+                input(type="text", name="city", placeholder="City name", required).form-control.mt-2.text-center
+                input(type="submit", value="Get Weather").form-control.mt-2
+            .form-group.pt-3
+                label(for="")
+                  if !weather
+                    p= error
+                  else if weather
+                    if wtype==='cloud'
+                      i.fas.fa-cloud.text-white
+                    else if wtype==='sun'
+                      i.fas.fa-sun.text-white
+                    else if wtype==='hot'
+                      i.fab.fa-hotjar.text-white
+                    p= weather 
+                    p.d-inline Min Temp: 
+                    span= w.main.temp_min 
+                    &nbsp; 
+                    &nbsp;
+                    p.d-inline Max Temp:
+                    span= w.main.temp_max
+                
