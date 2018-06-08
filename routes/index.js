@@ -6,7 +6,7 @@ const apiKey = '93d08695eed9948452207eb175553ee8';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Get Your Weather' });
 });
 
 router.post('/', function(req, res, next) {
@@ -35,7 +35,7 @@ router.post('/', function(req, res, next) {
 
 
         let weatherText = `It's ${weather.main.temp} degrees in ${weather.name}! (${weather.sys.country})`;
-        res.render('index', {weather: weatherText, error: null,w:weather, wtype:wt});
+        res.render('index', {title: 'Get Your Weather', weather: weatherText, error: null,w:weather, wtype:wt});
       }
     }
   });
